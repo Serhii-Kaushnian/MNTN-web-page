@@ -1,0 +1,408 @@
+:root {
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #fbd784;
+    --bgc-color: #0b1d26;
+}
+
+/* -------Fonts------------------------------ 
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; 
+-------Fonts------------------------------ */
+
+/* Обнуление */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+img {
+    display: block;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1.78;
+    font-size: 18px;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bgc-color);
+    background-image: url(./../img/BG.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* ---------------------------------------------------------------------------- */
+.wrapper {
+    max-width: 1790px;
+    padding: 0 15px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+/* ---------------------------------------------------------------------------- */
+._container {
+    max-width: 1490px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+._ibg {
+    position: relative;
+}
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* ===========Visualy hidden titles=============== */
+
+.visually-hidden {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* ============Common Styles==================================================== */
+
+._title::before {
+    display: inline-block;
+    content: '';
+    margin-right: 32px;
+    width: 72px;
+    height: 2px;
+    background-color: var(--secondary-text-color);
+}
+._title {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+._sub-title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif;
+}
+._text {
+}
+._read-more {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-text-color);
+}
+._read-more_icon {
+    margin-left: 16px;
+}
+
+/* ============Common Styles==================================================== */
+
+/* ------Header---------------------------------------------------------------------- */
+.header_container {
+    max-width: 1790px;
+    display: flex;
+    height: 122px;
+    align-items: center;
+}
+
+.header_container {
+}
+
+.header_logo {
+}
+.header_link {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 1.19;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: inherit;
+}
+.header_nav {
+    margin: 0 auto;
+}
+.header_list {
+    display: flex;
+}
+
+.list-header {
+}
+.list-header_item {
+}
+.list-header_item:not(:last-child) {
+    margin-right: 40px;
+}
+.list-header_link {
+    color: inherit;
+    transition: color 250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.list-header_link:hover,
+.list-header_link:hover {
+    color: #ffffffb7;
+}
+
+.header_item {
+}
+.header_login {
+    display: flex;
+}
+.login-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-header_icon {
+    width: 20px;
+    height: 20px;
+}
+.login-header_account {
+    font-size: 17px;
+    line-height: 1.235;
+    margin-left: 8px;
+}
+
+/* --------------Hiking guide------------------------------------------------------- */
+
+.hiking-guide {
+    margin: 132px auto 0;
+}
+.hiking-guide_container {
+    width: 980px;
+    padding: 0 15px;
+}
+
+.hiking-guide_container > *:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.hiking-guide_sub-title {
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 600;
+    font-size: 88px;
+    line-height: 1.14;
+    text-transform: capitalize;
+}
+.hiking-guide_scroll {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+.hiking-guide_icon {
+    margin-left: 16px;
+}
+/* ---------------Suggestions----------------------------------------------------------- */
+
+.suggestions {
+    margin-top: 843px;
+}
+.suggestions_container {
+}
+
+.suggestions_column > *:not(:last-child) {
+    margin-bottom: 200px;
+}
+
+.suggestions_row {
+    position: relative;
+    display: flex;
+}
+.suggestions_column :nth-child(even) .suggestion_discription {
+    margin-left: 200px;
+}
+
+.suggestions_column :nth-child(even) {
+    flex-direction: row-reverse;
+}
+.suggestion_discription > *:not(:last-child) {
+    margin-bottom: 27px;
+}
+
+.suggestions_count {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    font-size: 240px;
+    line-height: 1;
+    opacity: 0.1;
+}
+.suggestion_discription {
+    margin: auto 114px auto 150px;
+    padding: 10px;
+}
+.suggestions_title {
+}
+
+.suggestions_sub-title {
+}
+
+.suggestions_text {
+}
+
+.suggestions_read-more {
+}
+
+.suggestion_image {
+    width: 566px;
+    height: 720px;
+}
+/* -------Footer--------------------------------------------------- */
+
+.footer {
+    margin-top: 200px;
+    margin-bottom: 120px;
+}
+.footer_container {
+}
+
+.footer_row {
+    display: flex;
+}
+/* ------------Column-1------------------------------- */
+
+.footer_column-1 {
+    max-width: 375px;
+    padding: 10px;
+}
+.footer_logo {
+}
+.logo {
+    margin-bottom: 24px;
+}
+.logo_link {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 1.19;
+    letter-spacing: 0.01em;
+    color: inherit;
+}
+.footer_sub-title {
+    margin-bottom: 122px;
+}
+.footer_copyright {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.78;
+    opacity: 0.5;
+}
+/* -------Column-2--------------------------------------------------- */
+
+.footer_column-2 {
+}
+.column-2 {
+    padding: 10px;
+    margin-left: auto;
+}
+.column-2_title {
+}
+.title_column {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--secondary-text-color);
+    margin-bottom: 24px;
+}
+.column-2_list {
+}
+.item_column:not(:last-child) {
+    margin-bottom: 16px;
+}
+.column-2_link {
+}
+.link_column {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.77;
+    color: inherit;
+}
+/* ---------Column-3---------------------------- */
+
+.footer_column-3 {
+}
+.column-3 {
+    margin-left: 212px;
+    padding: 10px;
+    position: relative;
+}
+.column-3_title {
+}
+.title_column {
+}
+.column-3_list {
+}
+.column-3_item {
+}
+.item_column {
+}
+.column-3_link {
+}
+.link_column {
+}
+/* ------go up------------------------ */
+
+.go-up {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+.go-up_icon {
+    margin-left: 15px;
+    transform: rotate(180deg);
+}
